@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Rubik+Dirt&display=swap" rel="stylesheet">
+
+
+        <title>QR</title>
+</head>
+<body>
+    <div id = "wrap">
+        <header>
+            <div class="title">QR-code</div>
+            
+        </header>
+        
+    </div>
+    
+    <div class="qrImage">
+        <img src="../static/images/{{image}}"  class="rounded mx-auto d-block" alt="QR code">
+    
+    </div>
+
+    <form method="post" action="get_code">
+       <ul>
+            <li>
+                <label for="website">Ф.И.О.:</label>
+                <input type="text" name="fio" class="feedback-input" placeholder="Пупкин Семен Семенович">
+                
+            </li>
+            <li>
+                <label for="phone">Номер Телефона:</label>
+                <input type="text" name="phone" class="feedback-input" placeholder="+7923...">
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="text" name="email" class="feedback-input" placeholder="xxx@mail.ru">
+            </li>
+            <li>
+
+            <li>                
+                <input type="submit" value="Генерировать"/>
+            </li>
+            </ul>
+    </form>
+    <div class="copyr">
+        <!-- <hr class="hr-multiline"> -->
+        © ViGi-SoFt 2022
+    </div>
+</body>
+</html>
