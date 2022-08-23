@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html', image='logo.jpg')
+    return render_template('index.html', image='logo.png')
 
 
 @app.route('/qr', methods=['GET'])
