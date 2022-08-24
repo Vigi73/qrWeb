@@ -1,7 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-body { background:rgb(30,30,40); }
+body { background: rgb(255, 255, 255); }
 form { max-width:420px; margin:50px auto; }
+
+ul {
+    list-style: none;
+}
 
 
 .feedback-input {
@@ -12,7 +16,7 @@ form { max-width:420px; margin:50px auto; }
     border-radius: 5px;
     line-height: 22px;
     background-color: transparent;
-    border:2px solid #CC6666;
+    border:2px solid #598eef;
     transition: all 0.3s;
     padding: 13px;
     margin-bottom: 15px;
@@ -22,7 +26,7 @@ form { max-width:420px; margin:50px auto; }
   }
 
 label {
-    color:rgb(224, 214, 214);
+    color: rgb(28, 28, 28);
     font-family: Helvetica, Arial, sans-serif;
     font-weight:500;
     font-size: 18px;
@@ -31,7 +35,7 @@ label {
   [type="submit"] {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     width: 100%;
-    background:#CC6666;
+    background: #043284;
     border-radius:5px;
     border:0;
     cursor:pointer;
@@ -43,18 +47,19 @@ label {
     margin-top:-4px;
     font-weight:700;
   }
-  [type="submit"]:hover { background:#CC4949; }
+  [type="submit"]:hover { background: #021537; }
 
 header{
     width: 100%;
-    background: #42ec8f;
+    background: #03ab1c;
     height: 70px;
-    background: #42ec8f url(../images/qr-code.png) no-repeat 5% 50%;
+    background: #043284 url(../images/qr-code.png) no-repeat 5% 50%;
     
    }
 
    
  .title{
+     color: aliceblue;
     font-size: 36px;
     font-family: 'Rubik Dirt', cursive;
     padding-top: 10px;
@@ -82,9 +87,10 @@ img{
 
 .copyr {
     
-    color:rgb(224, 214, 214);
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: small;
+    font-weight: bold;
     font-family: 'Bad Script', cursive;
     
 }

@@ -1,6 +1,5 @@
-from flask import Flask, url_for, redirect, render_template, request
+from flask import Flask, url_for,  render_template, request
 import qrcode
-
 
 app = Flask(__name__)
 
