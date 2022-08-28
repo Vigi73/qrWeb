@@ -6,7 +6,9 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html', image='logo.png')
+    with open('download.txt') as f:
+        download = int(f.readline().strip())
+    return render_template('index.html', image='logo.png', download=download)
 
 
 @app.route('/qr', methods=['GET'])
@@ -25,7 +27,13 @@ def get_code():
     img = qrcode.make(text)
     img.save('static/images/qr.png')
 
-    return render_template('index.html', image='qr.png')
+    with open('download.txt') as fr:
+        fl = int(fr.read().strip())
+        fl += 1
+    with open('download.txt', 'w') as fw:
+        fw.write(str(fl))
+
+    return render_template('index.html', image='qr.png', download=fl)
 
 
 if __name__ == '__main__':
